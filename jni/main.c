@@ -15,8 +15,12 @@ static EGLDisplay display;
 static EGLSurface surface;
 static EGLContext context;
 
+int foo(int x);
+
 static void gles_init(struct android_app *android_app)
 {
+    foo(42);
+
     display = eglGetDisplay(EGL_DEFAULT_DISPLAY);
     eglInitialize(display, 0, 0);
 
